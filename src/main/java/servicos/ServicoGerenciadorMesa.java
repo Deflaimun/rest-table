@@ -34,11 +34,13 @@ public class ServicoGerenciadorMesa {
 
     public MesaResponse alocaMesa(Long qtd, Long idCliente) {
         MesaResponse response = new MesaResponse();
+        Cliente cliente = new Cliente(idCliente);
 
         if(qtd <=2){
             for (Mesa m:listaMesas2) {
-                if (!m.isPreenchida()){
+                if (m.isNotPreenchida()){
                     m.setPreenchida(true);
+                    m.setCliente(cliente);
                     response.setCodigo("M"+ m.getId()+"C"+idCliente);
                     response.setSucesso(true);
                     response.setMensagem("Mesa reservada com sucesso");
@@ -50,8 +52,9 @@ public class ServicoGerenciadorMesa {
         }
         else if (qtd <= 4){
             for (Mesa m:listaMesas4) {
-                if (!m.isPreenchida()){
+                if (m.isNotPreenchida()){
                     m.setPreenchida(true);
+                    m.setCliente(cliente);
                     response.setCodigo("M"+ m.getId()+"C"+idCliente);
                     response.setSucesso(true);
                     return response;
@@ -62,8 +65,9 @@ public class ServicoGerenciadorMesa {
         }
         else if (qtd <=10 ){
             for (Mesa m:listaMesas10) {
-                if (!m.isPreenchida()){
+                if (m.isNotPreenchida()){
                     m.setPreenchida(true);
+                    m.setCliente(cliente);
                     response.setCodigo("M"+ m.getId()+"C"+idCliente);
                     response.setSucesso(true);
                     return response;
@@ -87,22 +91,47 @@ public class ServicoGerenciadorMesa {
 
         if(qntMesa == 2 ){
             listaMesas2.get(m.getId()).setPreenchida(false);
+            listaMesas2.get(m.getId()).setCliente(null);
         }
         else if(qntMesa ==4){
             listaMesas2.get(m.getId()).setPreenchida(false);
+            listaMesas2.get(m.getId()).setCliente(null);
         }
         else if(qntMesa==10){
             listaMesas2.get(m.getId()).setPreenchida(false);
+            listaMesas2.get(m.getId()).setCliente(null);
         }
         response.setMensagem("Mesa "+m.getId() + " liberada com sucesso");
         response.setSucesso(true);
         return response;
     }
 
-    public MesaResponse verificaDisponibilidade() {
+    public MesaResponse verificaDisponibilidade(Long qtd) {
         MesaResponse response = new MesaResponse();
-
-
+        if(qtd <= 2 ){
+            for (Mesa m :listaMesas2) {
+                if(m.isNotPreenchida()){
+                    response.setMensagem("A Mesa "+m.getId()+ "esta vazia");
+                    response.setIdMesa(m.getId());
+                }
+            }
+        }
+        else if(qtd <=4){
+            for (Mesa m :listaMesas4) {
+                if(m.isNotPreenchida()){
+                    response.setMensagem("A Mesa "+m.getId()+ "esta vazia");
+                    response.setIdMesa(m.getId());
+                }
+            }
+        }
+        else if(qtd <=10){
+            for (Mesa m :listaMesas10) {
+                if(m.isNotPreenchida()){
+                    response.setMensagem("A Mesa "+m.getId()+ "esta vazia");
+                    response.setIdMesa(m.getId());
+                }
+            }
+        }
 
         return response;
 

@@ -6,6 +6,7 @@ public class MesaResponse {
     private boolean sucesso;
     private String codigo;
     private long qtdMesasAFrente;
+    private int idMesa;
 
     public String getMensagem() {
         return mensagem;
@@ -37,5 +38,13 @@ public class MesaResponse {
 
     public void setQtdMesasAFrente(long qtdMesasAFrente) {
         this.qtdMesasAFrente = qtdMesasAFrente;
+    }
+
+    public int getIdMesa() {
+        return idMesa;
+    }
+
+    public void setIdMesa(int idMesa) {
+        this.idMesa = idMesa;
     }
 }

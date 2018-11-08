@@ -19,8 +19,8 @@ public class MesaController {
     }
 
     @RequestMapping("/verificaDisponibilidade")
-    public MesaResponse verificaDisponibilidade(@RequestParam(value="qtd") Long qtd,@RequestParam(value="idCliente")Long idCliente) {
-        return this.servicoGerenciadorMesa.verificaDisponibilidade();
+    public MesaResponse verificaDisponibilidade(@RequestParam(value="qtd") Long qtd) {
+        return this.servicoGerenciadorMesa.verificaDisponibilidade(qtd);
     }
 
     @RequestMapping("/liberaMesa")

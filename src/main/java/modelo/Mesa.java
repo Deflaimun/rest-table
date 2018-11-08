@@ -5,6 +5,9 @@ public class Mesa {
     private int id;
     private long quantidadePessoas;
     private boolean preenchida;
+    private Cliente cliente;
+
+
 
     public int getId() {
         return id;
@@ -26,6 +29,10 @@ public class Mesa {
         return preenchida;
     }
 
+    public boolean isNotPreenchida() {
+        return preenchida;
+    }
+
     public void setPreenchida(boolean preenchida) {
         this.preenchida = preenchida;
     }
@@ -42,5 +49,13 @@ public class Mesa {
     }
 
     public Mesa() {
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 }
