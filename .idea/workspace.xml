@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="562cae53-5f90-4d7f-ab87-e8779c801b9d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gs-rest-service.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hello/Response/MesaResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/Response/MesaResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hello/visao/MesaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hello/visao/MesaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelo/Mesa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelo/Mesa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servicos/ServicoGerenciadorMesa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servicos/ServicoGerenciadorMesa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hello/Response/MesaResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hello/Response/MesaResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/hello/visao/MesaController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hello/visao/MesaController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/modelo/Mesa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/modelo/Mesa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servicos/ServicoGerenciadorMesa.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servicos/ServicoGerenciadorMesa.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +23,8 @@
       <file leaf-file-name="MesaController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hello/visao/MesaController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+            <state relative-caret-position="204">
+              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -32,9 +32,13 @@
       <file leaf-file-name="Mesa.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Mesa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="731">
-              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+            <state relative-caret-position="189">
+              <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
               <folding>
+                <element signature="e#477#478#0" expanded="true" />
+                <element signature="e#510#511#0" expanded="true" />
+                <element signature="e#586#587#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
                 <element signature="e#1028#1029#0" expanded="true" />
                 <element signature="e#1058#1059#0" expanded="true" />
                 <element signature="e#1105#1106#0" expanded="true" />
@@ -56,8 +60,8 @@
       <file leaf-file-name="ServicoGerenciadorMesa.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/servicos/ServicoGerenciadorMesa.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
+            <state relative-caret-position="308">
+              <caret line="84" column="9" lean-forward="true" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -79,17 +83,44 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="paulo.borges" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/modelo/Mesa.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hello/visao/MesaController.java" />
         <option value="$PROJECT_DIR$/src/main/java/hello/Response/MesaResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hello/visao/MesaController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/modelo/Mesa.java" />
         <option value="$PROJECT_DIR$/src/main/java/servicos/ServicoGerenciadorMesa.java" />
       </list>
     </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gs-rest-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gs-rest-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="gs-rest-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Plugins" type="7aea1407:MavenProjectsStructure$PluginsNode" />
+          <item name="spring-boot" type="36feed69:MavenProjectsStructure$PluginNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
@@ -213,6 +244,30 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="gs-rest-service [spring-boot:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="spring-boot:run" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -235,6 +290,11 @@
       <properties />
       <listeners />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Maven.gs-rest-service [spring-boot:run]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -247,6 +307,21 @@
       <option name="presentableId" value="Default" />
       <updated>1541684060179</updated>
     </task>
+    <task id="LOCAL-00001" summary="Modificando lógica de disponibilidade">
+      <created>1541686834043</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1541686834043</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Modificando lógica de disponibilidade">
+      <created>1541697571204</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1541697571204</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -255,24 +330,25 @@
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" weight="0.32943678" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Maven Projects" weight="0.3296875" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3995749" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -282,6 +358,22 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Modificando lógica de disponibilidade" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modificando lógica de disponibilidade" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/hello/visao/MesaController.java</url>
+          <line>17</line>
+          <properties />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Cliente.java">
@@ -305,9 +397,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/modelo/Mesa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        <state relative-caret-position="189">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
           <folding>
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#510#511#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
             <element signature="e#1028#1029#0" expanded="true" />
             <element signature="e#1058#1059#0" expanded="true" />
             <element signature="e#1105#1106#0" expanded="true" />
@@ -318,15 +414,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hello/visao/MesaController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        <state relative-caret-position="204">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servicos/ServicoGerenciadorMesa.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="116" column="13" lean-forward="true" selection-start-line="116" selection-start-column="13" selection-end-line="116" selection-end-column="13" />
+        <state relative-caret-position="308">
+          <caret line="84" column="9" lean-forward="true" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
         </state>
       </provider>
     </entry>

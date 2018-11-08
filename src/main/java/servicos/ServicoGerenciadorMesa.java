@@ -49,6 +49,7 @@ public class ServicoGerenciadorMesa {
             }
             response.setQtdMesasAFrente(listaEsperaMesas2.size());
             listaEsperaMesas2.add(new Cliente(idCliente));
+            response.setMensagem("Todas as mesas estão cheias. Cliente colocado numa fila");
         }
         else if (qtd <= 4){
             for (Mesa m:listaMesas4) {
@@ -62,6 +63,7 @@ public class ServicoGerenciadorMesa {
             }
             response.setQtdMesasAFrente(listaEsperaMesas4.size());
             listaEsperaMesas4.add(new Cliente(idCliente));
+            response.setMensagem("Todas as mesas estão cheias. Cliente colocado numa fila");
         }
         else if (qtd <=10 ){
             for (Mesa m:listaMesas10) {
@@ -75,11 +77,11 @@ public class ServicoGerenciadorMesa {
             }
             response.setQtdMesasAFrente(listaEsperaMesas10.size());
             listaEsperaMesas10.add(new Cliente(idCliente));
+            response.setMensagem("Todas as mesas estão cheias. Cliente colocado numa fila");
 
         }
         else{
             response.setMensagem("Não foi possível encontrar uma mesa");
-            response.setSucesso(false);
         }
 
         return response;
