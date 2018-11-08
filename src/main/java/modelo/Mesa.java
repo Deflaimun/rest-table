@@ -30,7 +30,7 @@ public class Mesa {
     }
 
     public boolean isNotPreenchida() {
-        return preenchida;
+        return !preenchida;
     }
 
     public void setPreenchida(boolean preenchida) {
