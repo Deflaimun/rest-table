@@ -1,5 +1,7 @@
 package hello.Response;
 
+import modelo.Cliente;
+
 public class MesaResponse {
 
     private String mensagem;
@@ -7,6 +9,20 @@ public class MesaResponse {
     private String codigo;
     private long qtdMesasAFrente;
     private int idMesa;
+    private long clienteId;
+    private Cliente cliente;
+
+    public long clienteId() {
+        return cliente.getId();
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
     public String getMensagem() {
         return mensagem;

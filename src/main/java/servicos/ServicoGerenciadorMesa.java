@@ -9,11 +9,11 @@ import java.util.List;
 
 public class ServicoGerenciadorMesa {
 
-    private List<Mesa> listaMesas2= new ArrayList<>();
+    private List<Mesa> listaMesas2 = new ArrayList<>();
     private List<Mesa> listaMesas4 = new ArrayList<>();
     private List<Mesa> listaMesas10 = new ArrayList<>();
 
-    private List<Cliente> listaEsperaMesas2= new ArrayList<>();
+    private List<Cliente> listaEsperaMesas2 = new ArrayList<>();
     private List<Cliente> listaEsperaMesas4 = new ArrayList<>();
     private List<Cliente> listaEsperaMesas10 = new ArrayList<>();
 
@@ -31,32 +31,32 @@ public class ServicoGerenciadorMesa {
     }
 
 
-
     public MesaResponse alocaMesa(Long qtd, Long idCliente) {
         MesaResponse response = new MesaResponse();
         Cliente cliente = new Cliente(idCliente);
 
-        if(qtd <=2){
-            for (Mesa m:listaMesas2) {
-                if (m.isNotPreenchida()){
+        if (qtd <= 2) {
+            for (Mesa m : listaMesas2) {
+                if (m.isNotPreenchida()) {
                     m.setPreenchida(true);
                     m.setCliente(cliente);
-                    response.setCodigo("M"+ m.getId()+"C"+idCliente);
+                    response.setCodigo("M" + m.getId() + "C" + idCliente);
                     response.setSucesso(true);
                     response.setMensagem("Mesa reservada com sucesso");
+                    response.setCliente(cliente);
                     return response;
                 }
             }
             response.setQtdMesasAFrente(listaEsperaMesas2.size());
             listaEsperaMesas2.add(new Cliente(idCliente));
             response.setMensagem("Todas as mesas estão cheias. Cliente colocado numa fila");
-        }
-        else if (qtd <= 4){
-            for (Mesa m:listaMesas4) {
-                if (m.isNotPreenchida()){
+            response.setIdMesa(-1);
+        } else if (qtd <= 4) {
+            for (Mesa m : listaMesas4) {
+                if (m.isNotPreenchida()) {
                     m.setPreenchida(true);
                     m.setCliente(cliente);
-                    response.setCodigo("M"+ m.getId()+"C"+idCliente);
+                    response.setCodigo("M" + m.getId() + "C" + idCliente);
                     response.setSucesso(true);
                     return response;
                 }
@@ -64,13 +64,13 @@ public class ServicoGerenciadorMesa {
             response.setQtdMesasAFrente(listaEsperaMesas4.size());
             listaEsperaMesas4.add(new Cliente(idCliente));
             response.setMensagem("Todas as mesas estão cheias. Cliente colocado numa fila");
-        }
-        else if (qtd <=10 ){
-            for (Mesa m:listaMesas10) {
-                if (m.isNotPreenchida()){
+            response.setIdMesa(-1);
+        } else if (qtd <= 10) {
+            for (Mesa m : listaMesas10) {
+                if (m.isNotPreenchida()) {
                     m.setPreenchida(true);
                     m.setCliente(cliente);
-                    response.setCodigo("M"+ m.getId()+"C"+idCliente);
+                    response.setCodigo("M" + m.getId() + "C" + idCliente);
                     response.setSucesso(true);
                     return response;
                 }
@@ -78,9 +78,9 @@ public class ServicoGerenciadorMesa {
             response.setQtdMesasAFrente(listaEsperaMesas10.size());
             listaEsperaMesas10.add(new Cliente(idCliente));
             response.setMensagem("Todas as mesas estão cheias. Cliente colocado numa fila");
+            response.setIdMesa(-1);
 
-        }
-        else{
+        } else {
             response.setMensagem("Não foi possível encontrar uma mesa");
         }
 
@@ -88,54 +88,36 @@ public class ServicoGerenciadorMesa {
 
     }
 
-    public MesaResponse liberaMesa(Mesa m,Long qntMesa){
+    public MesaResponse liberaMesa(Mesa m, Long qntMesa) {
         MesaResponse response = new MesaResponse();
 
-        if(qntMesa == 2 ){
+        if (qntMesa == 2) {
+            listaMesas2.get(m.getId()).setPreenchida(false);
+            listaMesas2.get(m.getId()).setCliente(null);
+        } else if (qntMesa == 4) {
+            listaMesas2.get(m.getId()).setPreenchida(false);
+            listaMesas2.get(m.getId()).setCliente(null);
+        } else if (qntMesa == 10) {
             listaMesas2.get(m.getId()).setPreenchida(false);
             listaMesas2.get(m.getId()).setCliente(null);
         }
-        else if(qntMesa ==4){
-            listaMesas2.get(m.getId()).setPreenchida(false);
-            listaMesas2.get(m.getId()).setCliente(null);
-        }
-        else if(qntMesa==10){
-            listaMesas2.get(m.getId()).setPreenchida(false);
-            listaMesas2.get(m.getId()).setCliente(null);
-        }
-        response.setMensagem("Mesa "+m.getId() + " liberada com sucesso");
+        response.setMensagem("Mesa " + m.getId() + " liberada com sucesso");
         response.setSucesso(true);
         return response;
     }
 
-    public MesaResponse verificaDisponibilidade(Long qtd) {
-        MesaResponse response = new MesaResponse();
-        if(qtd <= 2 ){
-            for (Mesa m :listaMesas2) {
-                if(m.isNotPreenchida()){
-                    response.setMensagem("A Mesa "+m.getId()+ "esta vazia");
-                    response.setIdMesa(m.getId());
-                }
-            }
-        }
-        else if(qtd <=4){
-            for (Mesa m :listaMesas4) {
-                if(m.isNotPreenchida()){
-                    response.setMensagem("A Mesa "+m.getId()+ "esta vazia");
-                    response.setIdMesa(m.getId());
-                }
-            }
-        }
-        else if(qtd <=10){
-            for (Mesa m :listaMesas10) {
-                if(m.isNotPreenchida()){
-                    response.setMensagem("A Mesa "+m.getId()+ "esta vazia");
-                    response.setIdMesa(m.getId());
-                }
-            }
-        }
+    public MesaResponse verificaDisponibilidade(Long qtd, Long idCliente) {
 
-        return response;
+        if (qtd <= 2) {
 
+
+        } else if (qtd <= 4) {
+
+
+        } else if (qtd <= 10) {
+
+
+        }
+        return null;
     }
 }
