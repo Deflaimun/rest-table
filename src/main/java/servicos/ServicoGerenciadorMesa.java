@@ -4,18 +4,18 @@ import hello.Response.MesaResponse;
 import modelo.Cliente;
 import modelo.Mesa;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 public class ServicoGerenciadorMesa {
 
-    private List<Mesa> listaMesas2 = new ArrayList<>();
-    private List<Mesa> listaMesas4 = new ArrayList<>();
-    private List<Mesa> listaMesas10 = new ArrayList<>();
+    private Map<Integer,Mesa> listaMesas2 = new HashMap<>();
+    private Map<Integer,Mesa> listaMesas4 = new HashMap<>();
+    private Map<Integer,Mesa> listaMesas10 = new HashMap<>();
 
-    private List<Cliente> listaEsperaMesas2 = new ArrayList<>();
-    private List<Cliente> listaEsperaMesas4 = new ArrayList<>();
-    private List<Cliente> listaEsperaMesas10 = new ArrayList<>();
+    private Queue<Cliente> listaEsperaMesas2 = new LinkedList<>();
+    private Queue<Cliente> listaEsperaMesas4 = new LinkedList<>();
+    private Queue<Cliente> listaEsperaMesas10 = new LinkedList<>();
+
 
 
     public ServicoGerenciadorMesa() {
@@ -24,19 +24,18 @@ public class ServicoGerenciadorMesa {
         Mesa mesa41 = new Mesa(1, 4, false);
         Mesa mesa42 = new Mesa(2, 4, false);
         Mesa mesa101 = new Mesa(4, 10, false);
-        listaMesas2.add(mesa21);
-        listaMesas4.add(mesa41);
-        listaMesas4.add(mesa42);
-        listaMesas10.add(mesa101);
+        listaMesas2.put(mesa21.getId(),mesa21);
+        listaMesas4.put(mesa41.getId(),mesa41);
+        listaMesas4.put(mesa42.getId(),mesa42);
+        listaMesas10.put(mesa101.getId(),mesa101);
     }
 
 
     public MesaResponse alocaMesa(Long qtd, Long idCliente) {
         MesaResponse response = new MesaResponse();
         Cliente cliente = new Cliente(idCliente);
-
         if (qtd <= 2) {
-            for (Mesa m : listaMesas2) {
+            for (Mesa m : listaMesas2.values()) {
                 if (m.isNotPreenchida()) {
                     m.setPreenchida(true);
                     m.setCliente(cliente);
@@ -52,7 +51,7 @@ public class ServicoGerenciadorMesa {
             response.setMensagem("Todas as mesas estão cheias. Cliente colocado numa fila");
             response.setIdMesa(-1);
         } else if (qtd <= 4) {
-            for (Mesa m : listaMesas4) {
+            for (Mesa m : listaMesas4.values()) {
                 if (m.isNotPreenchida()) {
                     m.setPreenchida(true);
                     m.setCliente(cliente);
@@ -66,7 +65,7 @@ public class ServicoGerenciadorMesa {
             response.setMensagem("Todas as mesas estão cheias. Cliente colocado numa fila");
             response.setIdMesa(-1);
         } else if (qtd <= 10) {
-            for (Mesa m : listaMesas10) {
+            for (Mesa m : listaMesas10.values()) {
                 if (m.isNotPreenchida()) {
                     m.setPreenchida(true);
                     m.setCliente(cliente);
@@ -88,36 +87,141 @@ public class ServicoGerenciadorMesa {
 
     }
 
-    public MesaResponse liberaMesa(Mesa m, Long qntMesa) {
+    public MesaResponse liberaMesa(Mesa m) {
         MesaResponse response = new MesaResponse();
+        String mensagem;
 
-        if (qntMesa == 2) {
+        if (m.getQuantidadePessoas() == 2) {
+
+
             listaMesas2.get(m.getId()).setPreenchida(false);
             listaMesas2.get(m.getId()).setCliente(null);
-        } else if (qntMesa == 4) {
-            listaMesas2.get(m.getId()).setPreenchida(false);
-            listaMesas2.get(m.getId()).setCliente(null);
-        } else if (qntMesa == 10) {
-            listaMesas2.get(m.getId()).setPreenchida(false);
-            listaMesas2.get(m.getId()).setCliente(null);
+        } else if (m.getQuantidadePessoas() == 4) {
+            listaMesas4.get(m.getId()).setPreenchida(false);
+            listaMesas4.get(m.getId()).setCliente(null);
+        } else if (m.getQuantidadePessoas() == 10) {
+            listaMesas10.get(m.getId()).setPreenchida(false);
+            listaMesas10.get(m.getId()).setCliente(null);
         }
-        response.setMensagem("Mesa " + m.getId() + " liberada com sucesso");
+
+
+        mensagem = "Mesa " + m.getId() + " liberada com sucesso.";
+        Cliente c = preencheNovaMesa(m);
+        if(c != null){
+            mensagem += "Chame o cliente " +  c.getId();
+
+        }
+
+        if(m.getQuantidadePessoas() ==2 ){
+            listaMesas2.replace(m.getId(),m);
+
+        }
+        else if(m.getQuantidadePessoas() ==4){
+            listaMesas4.replace(m.getId(),m);
+
+        }
+        else if(m.getQuantidadePessoas() ==10){
+            listaMesas10.replace(m.getId(),m);
+
+        }
+        response.setMensagem(mensagem);
         response.setSucesso(true);
         return response;
     }
 
-    public MesaResponse verificaDisponibilidade(Long qtd, Long idCliente) {
+    private Cliente preencheNovaMesa(Mesa m) {
+        if(!listaEsperaMesas2.isEmpty()){
+            m.setCliente(listaEsperaMesas2.peek());
+            m.setPreenchida(true);
+            return listaEsperaMesas2.poll();
 
-        if (qtd <= 2) {
+        }
 
+        if(!listaEsperaMesas4.isEmpty()){
+            m.setCliente(listaEsperaMesas4.peek());
+            m.setPreenchida(true);
+            return listaEsperaMesas4.poll();
 
-        } else if (qtd <= 4) {
+        }
 
-
-        } else if (qtd <= 10) {
-
+        if(!listaEsperaMesas10.isEmpty()){
+            m.setCliente(listaEsperaMesas10.peek());
+            m.setPreenchida(true);
+            return listaEsperaMesas10.poll();
 
         }
         return null;
+
+    }
+
+    public MesaResponse verificaDisponibilidade(Long qtd,Long idCliente) {
+        MesaResponse response = new MesaResponse();
+        String mensagem;
+
+        if (qtd <= 2) {
+            for (Mesa m: listaMesas2.values()) {
+                if(m.getCliente().getId() == idCliente){
+                    response.setCodigo("M" + m.getId() + "C" + idCliente);
+                    response.setSucesso(true);
+                    mensagem = "Mesa " +m.getId() + " liberada.";
+                    response.setMensagem(mensagem);
+                    return response;
+                }
+            }
+
+        } else if (qtd <= 4) {
+
+            for (Mesa m: listaMesas4.values()) {
+                if(m.getCliente().getId() == idCliente){
+                    response.setCodigo("M" + m.getId() + "C" + idCliente);
+                    response.setSucesso(true);
+                    mensagem = "Mesa " +m.getId() + " liberada.";
+                    response.setMensagem(mensagem);
+                    return response;
+                }
+            }
+
+        } else if (qtd <= 10) {
+
+            for (Mesa m: listaMesas10.values()) {
+                if(m.getCliente().getId() == idCliente){
+                    response.setCodigo("M" + m.getId() + "C" + idCliente);
+                    response.setSucesso(true);
+                    mensagem = "Mesa " +m.getId() + " liberada.";
+                    response.setMensagem(mensagem);
+                    return response;
+                }
+            }
+        }
+
+        Object[] cArray2 = listaEsperaMesas2.toArray();
+        Object[] cArray4 = listaEsperaMesas4.toArray();
+        Object[] cArray10 = listaEsperaMesas10.toArray();
+        Cliente c;
+        long posicaoFila=0;
+
+        for (int i = 0; i < cArray2.length; i++) {
+            c = (Cliente )cArray2[i];
+            if (c.getId() ==idCliente){
+                posicaoFila = i;
+            }
+        }
+
+        for (int i = 0; i < cArray4.length; i++) {
+            c = (Cliente )cArray4[i];
+            if (c.getId() ==idCliente){
+                posicaoFila = i;
+            }
+        }
+
+        for (int i = 0; i < cArray10.length; i++) {
+            c = (Cliente )cArray10[i];
+            if (c.getId() ==idCliente){
+                posicaoFila = i;
+            }
+        }
+
+        response.setQtdMesasAFrente(posicaoFila);
+        return response;
     }
 }

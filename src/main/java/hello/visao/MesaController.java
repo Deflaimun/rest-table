@@ -20,14 +20,16 @@ public class MesaController {
         return this.servicoGerenciadorMesa.alocaMesa(qtd, idCliente);
     }
 
+    @CrossOrigin(origins = "http://localhost:8100")
     @RequestMapping("/verificaDisponibilidade")
-    public MesaResponse verificaDisponibilidade(@RequestParam(value="qtd") Long qtd,@RequestParam(value="idCliente")Long idCliente) {
+    public MesaResponse verificaDisponibilidade(@RequestParam(value="qtd") Long qtd, @RequestParam(value="idCliente")Long idCliente) {
         return this.servicoGerenciadorMesa.verificaDisponibilidade(qtd,idCliente);
     }
 
+    @CrossOrigin(origins = "http://localhost:8100")
     @RequestMapping("/liberaMesa")
-    public MesaResponse liberaMesa(Mesa m, @RequestParam(value="idCliente")Long idCliente) {
-        return this.servicoGerenciadorMesa.liberaMesa(m,idCliente);
+    public MesaResponse liberaMesa(Mesa m) {
+        return this.servicoGerenciadorMesa.liberaMesa(m);
     }
 
     @CrossOrigin(origins = "http://localhost:8100")
