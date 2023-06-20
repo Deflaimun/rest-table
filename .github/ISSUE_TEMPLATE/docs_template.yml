@@ -23,8 +23,7 @@ body:
   - type: textarea
     attributes:
       label: New feature additional info
-      description: If this is a new feature, provide material that will help the
-        writer draft the new or updated content. 
+      description: If this is a new feature, provide material that will help the writer draft the new or updated content. 
       value: |
         If an issue only includes the
         name of a feature and release, it will be marked “More Info Needed” or
