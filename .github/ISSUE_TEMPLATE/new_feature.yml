@@ -1,6 +1,11 @@
 name: 🚀 New feature
-description: Suggest a documentation change to Redpanda
+description: Provide the necessary information for a new feature to be documented.
+labels: [New feature]
 body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is strictly used internally by Redpanda. If a documentation needs additional clarification or you're reporting a bug, consider using Documentation Request.
   - type: textarea
     attributes:
       label: Feature Description
@@ -25,3 +30,11 @@ body:
     attributes:
       label: Which release is it included or expected?
       placeholder: For example v22.1, v23.2.
+  - type: markdown
+    attributes:
+      value: |
+        Documentation Issues must be distinct and not overlap. 
+
+        If filing an Issue for a feature that spans platform and cloud, you must file two separate Issues. 
+
+        Each Issue will drive the new content in GitHub for the respective platform or cloud doc. 
