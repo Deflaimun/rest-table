@@ -9,13 +9,13 @@ body:
   - type: textarea
     attributes:
       label: Feature Description
-      description: Describe the feature.
+      description: Describe the new feature. Who is the audience for this update? For example, cluster admins, or developers? Do you know the context in which users will likely search for this content? 
     validations:
       required: true
   - type: textarea
     attributes:
       label: New feature additional info
-      description: If this is a new feature, provide material that will help the writer draft the new or updated content. If an issue only includes the name of a feature and release, it will be marked “More Info Needed” or “Blocked”.
+      description: Provide material that will help the writer draft the new or updated content. If an issue only includes the name of a feature and release, it will be marked “More Info Needed” or “Blocked”.
       placeholder: |
         1. Links to internal wikis, PRDs, design docs, KIPs, training material, or slide decks. 
         2. Links to engineering PRs that implement the update. 

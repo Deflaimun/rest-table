@@ -1,11 +1,11 @@
 name: 📚 Documentation request
-description: Suggest a documentation change to Redpanda
+description: Suggest a documentation change to Redpanda.
 labels: [Customer feedback]
 body:
   - type: markdown
     attributes:
       value: |
-        This template is strictly used by customer requests. If you need to fill a new feature, consider using the other template.
+        This template is strictly used by customer requests. If you need to fill a new feature, consider using New Feature.
   - type: textarea
     attributes:
       label: Issue Description
