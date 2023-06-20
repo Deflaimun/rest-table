@@ -1,13 +1,15 @@
 name: Documentation request
 description: Suggest a documentation change to Redpanda
-labels: [Customer feedback] 
 body:
-  - type: textarea
+  - type: markdown
     attributes:
-      label: Issue Description
-      description: What problem does this issue solve for customers?
+      value: |
+        What problem does this issue solve for customers?
         Who is the audience for this update? For example, cluster admins, or developers?
         Do you know the context in which users will likely search for this content? If so, share it.
         If this is a new feature, add a label for the version in which the update is expected.
+  - type: textarea
+    attributes:
+      label: Issue Description
     validations:
       required: true
