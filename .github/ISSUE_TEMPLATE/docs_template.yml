@@ -20,4 +20,4 @@ body:
     attributes:
       label: Is this a new feature?
       options:
-        - label: Yes
+        - label: "Yes"
