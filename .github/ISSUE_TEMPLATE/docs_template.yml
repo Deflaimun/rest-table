@@ -22,7 +22,7 @@ body:
         - label: "Yes"
   - type: textarea
     attributes:
-      label: Issue Description
+      label: New feature additional info
       description: If this is a new feature, provide material that will help the
         writer draft the new or updated content. 
       value: |
