@@ -1,6 +1,5 @@
 name: Documentation request
-about: Suggest a documentation change to Redpanda
-description: Report a documentation feedback to Redpanda
+description: Suggest a documentation change to Redpanda
 labels: [Customer feedback] 
 body:
   - type: textarea
