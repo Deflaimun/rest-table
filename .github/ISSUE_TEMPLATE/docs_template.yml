@@ -4,10 +4,11 @@ body:
   - type: textarea
     attributes:
       label: Issue Description
-      description: What problem does this issue solve for customers?
-        Who is the audience for this update? For example, cluster admins, or developers?
-        Do you know the context in which users will likely search for this content? If so, share it.
-        If this is a new feature, add a label for the version in which the update is expected.
+      description: What problem does this issue solve for customers? Who is the
+        audience for this update? For example, cluster admins, or developers? Do
+        you know the context in which users will likely search for this content?
+        If so, share it. If this is a new feature, add a label for the version
+        in which the update is expected.
     validations:
       required: true
   - type: textarea
@@ -18,18 +19,14 @@ body:
     attributes:
       label: Is this a new feature?
       options:
-        - label: "Yes"
+        - label: Yes
   - type: textarea
     attributes:
       label: Issue Description
-      description: If this is a new feature, provide material that will help the writer draft the new or updated content. 
-                  If an issue only includes the name of a feature and release, it will be marked “More Info Needed” or “Blocked”. 
-                  
-                  Ideally, the issue will provide
-                  Links to internal wikis, PRDs, design docs, KIPs, training material, or slide decks.
-                  Links to engineering PRs that implement the update.
-                  Links to blog posts, if applicable.
-                  Identify specific Slack channels that the writer can join to get more details about the feature.
-                  Links to Slack conversations (RP and RP Community) about the issue.
-                  Names of SMEs who can answer questions and act as reviewers (at least one engineer and one PM).
-                  Any additional information that will be of use to the writer.
+      description: >-
+        If this is a new feature, provide material that will help the
+        writer draft the new or updated content. If an issue only includes the
+        name of a feature and release, it will be marked “More Info Needed” or
+        “Blocked”.
+
+        Ideally, the issue will provide Links to internal wikis, PRDs, design docs, KIPs, training material, or slide decks. Links to engineering PRs that implement the update. Links to blog posts, if applicable. Identify specific Slack channels that the writer can join to get more details about the feature. Links to Slack conversations (RP and RP Community) about the issue. Names of SMEs who can answer questions and act as reviewers (at least one engineer and one PM). Any additional information that will be of use to the writer.
