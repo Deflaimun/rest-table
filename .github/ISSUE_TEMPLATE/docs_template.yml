@@ -22,7 +22,7 @@ body:
   - type: textarea
     attributes:
       label: Issue Description
-      description: If this is a new feature, provide material that will help the writer draft the new or updated content. If an issue only includes the name of a feature and release, it will be marked “More Info Needed” or “Blocked”. Ideally, the issue will provide":"
+      description: If this is a new feature, provide material that will help the writer draft the new or updated content. If an issue only includes the name of a feature and release, it will be marked “More Info Needed” or “Blocked”. Ideally, the issue will provide
                     Links to internal wikis, PRDs, design docs, KIPs, training material, or slide decks.
                     Links to engineering PRs that implement the update.
                     Links to blog posts, if applicable.
