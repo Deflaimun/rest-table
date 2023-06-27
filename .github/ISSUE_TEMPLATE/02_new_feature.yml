@@ -13,7 +13,7 @@ body:
 
         Each Issue will drive the new content in GitHub for the respective platform or cloud doc. 
 
-        This template is strictly used internally by Redpanda. If a documentation needs additional clarification or you're reporting a bug, consider using Documentation Request.
+        This template is strictly used internally by Redpanda. If documentation needs additional clarification or you're reporting a bug, file a Documentation Request issue.
   - type: textarea
     attributes:
       label: Feature Description

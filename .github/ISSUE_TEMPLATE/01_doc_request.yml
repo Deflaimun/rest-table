@@ -1,13 +1,13 @@
-name: 📚 Documentation request
+name: 📚 Documentation update request
 description: Suggest a change to existing Redpanda documentation.
 labels: [doc request]
 body:
   - type: markdown
     attributes:
       value: |
-        Help us improve Redpanda documentation! You can search [open doc issues](https://github.com/redpanda-data/documentation/issues), and you can ask for guidance on our [community Slack docs channel](https://redpandacommunity.slack.com/archives/C048589SBEZ).
+        Help us improve Redpanda documentation! You can search [open doc issues](https://github.com/redpanda-data/documentation/issues), and ask for guidance on our [community Slack docs channel](https://redpanda.com/slack).
 
-        Create issues for doc bugs, improvements, or content gaps. If you need to fill a new feature, consider using the New Feature template.
+        Create issues for doc bugs, improvements, or content gaps. If you need to request a new feature, consider using the New Feature template.
   - type: textarea
     attributes:
       label: Issue Description
@@ -26,4 +26,4 @@ body:
       description: If applicable, provide the link to the Redpanda Community Slack conversation.
   - type: markdown
     attributes:
-      value: Need to talk about anything else? You can reach us directly at [Redpanda Community Slack](https://rpnda.co/slack).
+      value: Need to ask questions about Redpanda documentation? You can reach us directly at [Redpanda Community Slack](https://rpnda.co/slack).
