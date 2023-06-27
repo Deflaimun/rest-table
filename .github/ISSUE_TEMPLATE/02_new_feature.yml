@@ -57,4 +57,4 @@ body:
   - type: textarea
     attributes:
       label: More info
-      description: Include links to more info`:` RFCs, PRDs, blogs, KIPs, related issues, or Slack conversations.
+      description: Include links to more info&#58; RFCs, PRDs, blogs, KIPs, related issues, or Slack conversations.
