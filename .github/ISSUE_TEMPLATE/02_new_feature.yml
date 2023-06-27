@@ -13,7 +13,7 @@ body:
 
         Each Issue will drive the new content in GitHub for the respective platform or cloud doc. 
 
-        This template is strictly used internally by Redpanda. If documentation needs additional clarification or you're reporting a bug, file a Documentation Request issue.
+        This template is strictly used internally by Redpanda. If a documentation needs additional clarification or you're reporting a bug, consider using Documentation Request.
   - type: textarea
     attributes:
       label: Feature Description
@@ -29,7 +29,7 @@ body:
   - type: textarea
     attributes:
       label: How it works
-      description: How does it work (concepts and procedures)?
+      description: List new concepts and the procedures for using the feature. Include any new or changed config flags, rpk commands, or metrics.
     validations:
       required: true
   - type: textarea
@@ -50,10 +50,6 @@ body:
       description: Who are the SMEs for approving the feature doc?
     validations:
       required: true
-  - type: textarea
-    attributes:
-      label: Code changes
-      description: Does this include any new or changing config flags, rpk commands, or metrics?
   - type: textarea
     attributes:
       label: More info
