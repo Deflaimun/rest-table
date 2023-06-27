@@ -1,0 +1,60 @@
+name: 🚀 New feature
+description: Request documentation for a new feature. (Redpanda employees only.)
+labels: [new feature]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Create a new issue for new features to be documented. Provide as much information as possible. 
+
+        Documentation Issues must be distinct and not overlap. 
+
+        If filing an Issue for a feature that spans platform and cloud, you must file two separate Issues. 
+
+        Each Issue will drive the new content in GitHub for the respective platform or cloud doc. 
+
+        This template is strictly used internally by Redpanda. If a documentation needs additional clarification or you're reporting a bug, consider using Documentation Request.
+  - type: textarea
+    attributes:
+      label: Feature Description
+      description: What problem does this feature solve?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Prerequisites 
+      description: Are there any prerequisites or limitations that users need to be aware of?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: How it works
+      description: How does it work (concepts and procedures)?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Use cases
+      description: What are the use cases and benefits?
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Version available
+      description: In what release will it be available?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: SMEs
+      description: Who are the SMEs for approving the feature doc?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Code changes
+      description: Does this include any new or changing config flags, rpk commands, or metrics?
+  - type: textarea
+    attributes:
+      label: More info
+      description: Include links to more info`:` RFCs, PRDs, blogs, KIPs, related issues, or Slack conversations.
