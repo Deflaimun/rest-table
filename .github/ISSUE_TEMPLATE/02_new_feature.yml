@@ -1,5 +1,5 @@
 name: 🚀 New feature
-description: Request documentation for a new feature. (Redpanda employees only.)
+description: Request documentation for a new feature. 
 labels: [new feature]
 body:
   - type: markdown
