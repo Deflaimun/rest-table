@@ -5,25 +5,11 @@ body:
   - type: markdown
     attributes:
       value: |
-        Create a new issue for new features to be documented. Provide as much information as possible. 
-
-        Documentation Issues must be distinct and not overlap. 
-
-        If filing an Issue for a feature that spans platform and cloud, you must file two separate Issues. 
-
-        Each Issue will drive the new content in GitHub for the respective platform or cloud doc. 
-
-        This template is strictly used internally by Redpanda. If a documentation needs additional clarification or you're reporting a bug, consider using Documentation Request.
+        Create an issue for a new feature to be documented. Provide as much information as possible. This template is for Redpanda employees only. 
   - type: textarea
     attributes:
-      label: Feature Description
+      label: Feature description
       description: What problem does this feature solve?
-    validations:
-      required: true
-  - type: textarea
-    attributes:
-      label: Prerequisites 
-      description: Are there any prerequisites or limitations that users need to be aware of?
     validations:
       required: true
   - type: textarea
@@ -36,6 +22,12 @@ body:
     attributes:
       label: Use cases
       description: What are the use cases and benefits?
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Prerequisites 
+      description: Are there any prerequisites or limitations that users need to be aware of?
     validations:
       required: true
   - type: input
